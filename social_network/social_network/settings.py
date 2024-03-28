@@ -25,7 +25,7 @@ SECRET_KEY = 'django-insecure-*4*ra&$xvv*ut!-!c%eyxxi(ewlosh(&&k+mwew)85zgf2m4qg
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['www.vps.antonk.space']
 
 
 # Application definition
@@ -82,8 +82,10 @@ DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql',
         'NAME': 'dj_diplom',
-        'USER': 'adilet',
-        'PASSWORD': '1',
+        'USER': 'postgres',
+        'PASSWORD': 'postgres',
+        'HOST': '127.0.0.1',
+        'PORT': '12345'
     }
 }
 
@@ -122,7 +124,10 @@ USE_TZ = True
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/5.0/howto/static-files/
 
+STATIC_ROOT = 'static/'
 STATIC_URL = 'static/'
+MEDIA_ROOT = 'media/'
+MEDIA_URL = 'media/'
 # настройте STATIC_ROOT, MEDIA_URL и MEDIA_ROOT
 
 # Default primary key field type
